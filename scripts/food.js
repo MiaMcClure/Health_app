@@ -46,9 +46,18 @@ function displayData(data) {
 }
 
 onload = async () => {
-  await fetchData('product/3017620422003');
+  if (!localStorage.productId) {
+    localStorage.productId = 3017620422003;
+  }
+  let productId = localStorage.productId;
+  let idInput = document.getElementById('idInput');
+  idInput.value = productId;
+
+  await fetchData(`product/${productId}`);
+
   document.getElementById('searchButton').addEventListener('click', async () => {
-    let idInput = document.getElementById('idInput').value;
-    await fetchData(`product/${idInput}`);
+    idInput = document.getElementById('idInput').value;
+    localStorage.productId = idInput;
+    await fetchData(`product/${localStorage.productId}`);
   });
 };
