@@ -1,0 +1,18 @@
+#home-header {
+    background-color: #c18c71;
+}
+#home-filler-container{
+    text-align: center;
+}
+.home-filler {
+    max-width: 20vw;
+    aspect-ratio: 1/1;
+}
+.banner {
+    position: relative;
+    height: 20vw;
+    overflow: hidden;
+}
+.banner>img {
+    width: 100vw;
+}
