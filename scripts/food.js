@@ -47,7 +47,7 @@ function displayData(data) {
 
 onload = async () => {
   if (!localStorage.productId) {
-    localStorage.productId = 3017620422003;
+    localStorage.productId = 8002270014901;
   }
   let productId = localStorage.productId;
   let idInput = document.getElementById('idInput');
