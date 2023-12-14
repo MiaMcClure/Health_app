@@ -1,94 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!DOCTYPE html>
-    <html lang="en">
-    
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home</title>
-        <!-- bootstrap v5.3 -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-        <!-- my stylesheet -->
-        <link rel="stylesheet" href="styles/styles.css">
-    </head>
-    
-    <body>
-        <header>
-            <!-- navbar -->
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="index.html">Brand</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="food.html">Food</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="users.html">Users</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="teams.html">Teams</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-            <!-- page header -->
-            <h1>Find Users</h1>
-        </header>
-    
-        <!-- main content -->
-        <main>
-        
-        </main>
-    
-        <!-- footer -->
-        <footer>
-            <div class="container m-5">
-            <img src="icons/facebook_icon.png" alt="facebook_icon">
-            <img src="icons/instagram_icon.png" alt="instagram_icon">
-            <img src="icons/pinterest_icon.png" alt="pinterest_icon">
-            <img src="icons/snapchat_icon.png" alt="snapchat_icon">
-            <img src="icons/tiktok_icon.png" alt="tiktok_icon">
-            <img src="icons/twitter_icon.png" alt="twitter_icon">
-            </div>
-            
-            <p>&copy; 2023 ByteBuddies</p>
-        </footer>
-    
-        <!-- bootstrap script -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-            crossorigin="anonymous"></script>
-        <!-- app.js -->
-        <script src="scripts/app.js"></script>
-    </body>
-    
-    </html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
     <!-- bootstrap v5.3 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous" />
     <!-- my stylesheet -->
-    <link rel="stylesheet" href="styles/styles.css">
-</head>
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
 
-<body>
-  
+  <body>
+    <header>
+      <!-- navbar -->
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">Brand</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="food.html">Food</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="users.html">Users</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="teams.html">Teams</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- page header -->
+      <h1 class="my-5">Find Product Information</h1>
+    </header>
 
-</body>
+    <!-- main content -->
+    <main class="container-md" style="position: relative; min-height: 100vh">
+        <label for="idInput" class="form-label">Barcode Id</label>
+      <div class="input-group mb-5">
+        <input
+          id="idInput"
+          type="number"
+          class="form-control"
+          placeholder="Product Id"
+          aria-label="Recipient's username"
+          aria-describedby="searchButton" />
+        <button class="btn btn-outline-secondary" type="button" id="searchButton">
+          Search
+        </button>
+      </div>
+      <div class="card my-3">
+        <div class="row g-0">
+          <div class="col-md-4 d-flex justify-content-center">
+            <img id="productImage" class="img-fluid rounded-start p-3" alt="Product Image" />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title" id="productName"></h5>
+              <!-- <p class="card-text">
+                This is a wider card with supporting text below as a natural lead-in to
+                additional content. This content is a little bit longer.
+              </p> -->
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <strong>Ingredients: </strong><span id="ingredients"></span>
+                </li>
+                <li class="list-group-item">
+                  <strong>Allergens: </strong><span id="allergens"></span>
+                </li>
+                <li class="list-group-item">
+                  <strong>Countries Sold: </strong><span id="countriesSold"></span>
+                </li>
+                <li class="list-group-item">
+                  <strong>Stores: </strong><span id="stores"></span>
+                </li>
+              </ul>
+              <div class="card-body">
+                <a class="card-link" id="productPageLink" target="_blank"
+                  >Official Product Page</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
+      <img />
+      <p id="productName" class="mt-2"></p>
+    </main>
 
+    <!-- footer -->
+    <footer>
+      <div class="container m-5">
+        <img src="icons/facebook_icon.png" alt="facebook_icon" />
+        <img src="icons/instagram_icon.png" alt="instagram_icon" />
+        <img src="icons/pinterest_icon.png" alt="pinterest_icon" />
+        <img src="icons/snapchat_icon.png" alt="snapchat_icon" />
+        <img src="icons/tiktok_icon.png" alt="tiktok_icon" />
+        <img src="icons/twitter_icon.png" alt="twitter_icon" />
+      </div>
+
+      <p>&copy; 2023 ByteBuddies</p>
+    </footer>
+
+    <!-- bootstrap script -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"></script>
+    <!-- food.js -->
+    <script src="scripts/food.js"></script>
+  </body>
 </html>
