@@ -33,22 +33,31 @@ function displayTeam(result, groupName) {
     // console.log(groupName);
     let filteredTeams = result.filter(user => user.Groupname === groupName)
 
-  console.log(filteredTeams);
-  console.log(filteredTeams[0].Name);
+//   console.log(filteredTeams);
+//   console.log(filteredTeams[0].Name);
 //   console.log(filteredTeams[0].Email);
 //   console.log(filteredTeams[0].GitHubProfile);
 //   console.log(filteredTeams[0].imageURL);
-  
-  let message = `
+let message = "";  
+filteredTeams.forEach(element => {
+   
+    message += `
   <div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
+  <img src="${element.imageURL}" class="card-img-top" alt="...">
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <h2 class="card-title">Team member</h2>
+    <h5>Name: ${element.Name} </h5>
+    <h5>Email: ${element.Email} </h5>
+    <h5>GitHub: ${element.GitHubProfile} </h5>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>
   `
+
+
+});
+
+  
     document.getElementById('output').innerHTML = message;
 }
 
